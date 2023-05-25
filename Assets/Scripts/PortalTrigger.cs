@@ -42,21 +42,17 @@ public class PortalTrigger : MonoBehaviour
             forward = reversed ? !forward : forward;
             int stencil;
             GameObject roomOn, roomOff;
-            if (forward && PortalManager.instance.roomIndex == startRoom)
+            if (forward)
             {
                 stencil = endRoom % Constants.NUM_STENCILS;
                 roomOn = PortalManager.instance.rooms[endRoom];
                 roomOff = PortalManager.instance.rooms[startRoom];
             }
-            else if (PortalManager.instance.roomIndex == endRoom)
+            else
             {
                 stencil = startRoom % Constants.NUM_STENCILS;
                 roomOn = PortalManager.instance.rooms[startRoom];
                 roomOff = PortalManager.instance.rooms[endRoom];
-            }
-            else
-            {
-                return;
             }
 
             foreach (Transform child in roomOn.transform)
