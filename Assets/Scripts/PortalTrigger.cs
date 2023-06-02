@@ -39,7 +39,6 @@ public class PortalTrigger : MonoBehaviour
                 _ => transform.right,
             };
             bool forward = Vector3.Dot(direction, forwardDirection) < 0;
-            Debug.Log(forward);
             forward = reversed ? !forward : forward;
             int stencil;
             GameObject roomOn, roomOff;
