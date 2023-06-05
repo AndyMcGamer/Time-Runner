@@ -35,6 +35,16 @@ public class PortalManager : MonoBehaviour
             {
                 child.gameObject.GetComponent<Collider>().enabled = true;
             }
+            else
+            {
+                foreach (Transform c in child)
+                {
+                    if (c.CompareTag("Collider"))
+                    {
+                        c.gameObject.GetComponent<Collider>().enabled = true;
+                    }
+                }
+            }
         }
         foreach (var feature in rendererData.rendererFeatures)
         {
