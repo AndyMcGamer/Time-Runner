@@ -61,12 +61,32 @@ public class PortalTrigger : MonoBehaviour
                 {
                     child.gameObject.GetComponent<Collider>().enabled = true;
                 }
+                else
+                {
+                    foreach (Transform c in child)
+                    {
+                        if (c.CompareTag("Collider"))
+                        {
+                            c.gameObject.GetComponent<Collider>().enabled = true;
+                        }
+                    }
+                }
             }
             foreach (Transform child in roomOff.transform)
             {
                 if (child.CompareTag("Collider"))
                 {
                     child.gameObject.GetComponent<Collider>().enabled = false;
+                }
+                else
+                {
+                    foreach (Transform c in child)
+                    {
+                        if (c.CompareTag("Collider"))
+                        {
+                            c.gameObject.GetComponent<Collider>().enabled = false;
+                        }
+                    }
                 }
             }
             PortalManager.instance.SetStencilMask(stencil);
