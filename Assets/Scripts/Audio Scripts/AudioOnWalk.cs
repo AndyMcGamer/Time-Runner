@@ -17,7 +17,7 @@ public class AudioOnWalk : MonoBehaviour
         audioSource.clip = audioClip;
         audioSource.playOnAwake = false;
         audioSource.loop = true;
-        audioSource.volume = 0.05f;
+        audioSource.volume = 0.5f;
         lastPositionX = gameObject.GetComponent<Transform>().position.x;
         lastPositionZ = gameObject.GetComponent<Transform>().position.z;
     }

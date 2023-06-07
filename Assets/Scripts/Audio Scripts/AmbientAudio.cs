@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class AmbientAudio : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    private AudioSource audioSource;
+    private AudioClip currentClip;
+    private bool temp1 = false, temp2 = false;
+    public AudioClip audioClip1, audioClip2, audioClip3;
 
     void Awake()
     {
@@ -16,7 +15,7 @@ public class AmbientAudio : MonoBehaviour
         currentClip = audioClip1;
         audioSource.clip = currentClip;
         audioSource.loop = true;
-        audioSource.volume = 0.2f;
+        audioSource.volume = 0.4f;
         audioSource.Play();
     }
 
@@ -39,9 +38,6 @@ public class AmbientAudio : MonoBehaviour
         }
     }
 
-    private AudioSource audioSource;
-    private AudioClip currentClip;
-    private bool temp1 = false, temp2 = false;
-    public AudioClip audioClip1, audioClip2, audioClip3;
+    
 
 }
