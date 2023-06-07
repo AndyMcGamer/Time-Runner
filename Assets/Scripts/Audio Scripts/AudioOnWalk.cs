@@ -8,11 +8,16 @@ public class AudioOnWalk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    void Awake()
+    {
         audioSource = gameObject.AddComponent<AudioSource>() as AudioSource;
         audioSource.clip = audioClip;
         audioSource.playOnAwake = false;
         audioSource.loop = true;
-        audioSource.volume = 0.1f;
+        audioSource.volume = 0.05f;
         lastPositionX = gameObject.GetComponent<Transform>().position.x;
         lastPositionZ = gameObject.GetComponent<Transform>().position.z;
     }
