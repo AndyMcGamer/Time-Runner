@@ -12,6 +12,7 @@ public class TimeTravel : MonoBehaviour
     {
         timeTravelContinuous.Play();
         col.enabled = true;
+        gameObject.tag = "Collider";
     }
 
     private void OnTriggerEnter(Collider other)

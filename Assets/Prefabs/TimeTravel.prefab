@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 849441551844347195}
   - component: {fileID: 4190400549815341266}
   - component: {fileID: 6075957743805212999}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4834,7 +4834,7 @@ GameObject:
   - component: {fileID: 598633241723526838}
   - component: {fileID: 598633241723526837}
   - component: {fileID: 598633241723526834}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9769,7 +9769,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -9810,7 +9810,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -9849,7 +9849,7 @@ GameObject:
   - component: {fileID: 828057581058377306}
   - component: {fileID: 3658674589856069070}
   - component: {fileID: 7612420217806718930}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Temporary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14723,7 +14723,7 @@ GameObject:
   - component: {fileID: 2529193457318988482}
   - component: {fileID: 3135196102078827968}
   - component: {fileID: 4466928831539827007}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: DarkSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19544,7 +19544,7 @@ GameObject:
   - component: {fileID: 8485476346493994631}
   - component: {fileID: 7762288934779803695}
   - component: {fileID: 3492179825529025912}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: CircleSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24423,7 +24423,7 @@ GameObject:
   - component: {fileID: 3082105675522734556}
   - component: {fileID: 1957745626443981877}
   - component: {fileID: 8457240302646189472}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29246,7 +29246,7 @@ GameObject:
   - component: {fileID: 2973151586306959953}
   - component: {fileID: 2973151586306959954}
   - component: {fileID: 2973151586306959967}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34181,7 +34181,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -34222,7 +34222,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -34261,7 +34261,7 @@ GameObject:
   - component: {fileID: 3058469322332648125}
   - component: {fileID: 1426019821170098473}
   - component: {fileID: 5235640744269837109}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Continuous
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39136,7 +39136,7 @@ GameObject:
   - component: {fileID: 150171658515217957}
   - component: {fileID: 760668949305489703}
   - component: {fileID: 2085655104815179224}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: DarkSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43955,7 +43955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5133296451694191463}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: TimeTravelVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43990,7 +43990,7 @@ GameObject:
   - component: {fileID: 5133296451748093894}
   - component: {fileID: 5133296451748093895}
   - component: {fileID: 5133296451748093893}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: TimeTravel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44054,7 +44054,7 @@ GameObject:
   - component: {fileID: 255199938986892675}
   - component: {fileID: 2922474217729780037}
   - component: {fileID: 6486286281264518774}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Sides
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48866,7 +48866,7 @@ GameObject:
   - component: {fileID: 2487854658431691108}
   - component: {fileID: 685306417671413154}
   - component: {fileID: 8867569381356216977}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Sides
   m_TagString: Untagged
   m_Icon: {fileID: 0}
