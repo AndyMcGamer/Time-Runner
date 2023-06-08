@@ -19,22 +19,28 @@ public class MainRoomPuzzle : MonoBehaviour
     public XRSocketInteractor holder3;
 
     public bool checkBox1(){
-        if(holder1.selectTarget == null || box1 == null){
+        IXRSelectInteractable interactable = holder1.GetOldestInteractableSelected();
+        if(interactable == null || box1 == null){
             return false;
         }
-        return holder1.selectTarget.name == box1.name;
+        GameObject box = interactable.transform.gameObject;
+        return box.name == box1.name;
     }
     public bool checkBox2(){
-        if(holder2.selectTarget == null || box2 == null){
+        IXRSelectInteractable interactable = holder2.GetOldestInteractableSelected();
+        if(interactable == null || box2 == null){
             return false;
         }
-        return holder2.selectTarget.name == box2.name;
+        GameObject box = interactable.transform.gameObject;
+        return box.name == box2.name;
     }
     public bool checkBox3(){
-        if(holder3.selectTarget == null || box3 == null){
+        IXRSelectInteractable interactable = holder3.GetOldestInteractableSelected();
+        if(interactable == null || box3 == null){
             return false;
         }
-        return holder3.selectTarget.name == box3.name;
+        GameObject box = interactable.transform.gameObject;
+        return box.name == box3.name;
     }
 
     public void CheckPlacement()
