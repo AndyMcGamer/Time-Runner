@@ -33,7 +33,7 @@ public class TimeTravel : MonoBehaviour
     private void Awake()
     {
         present = true;
-        cooldown = 7f;
+        cooldown = 5.5f;
         heldItems ??= new();
     }
     public void FixedPortal()
@@ -41,7 +41,7 @@ public class TimeTravel : MonoBehaviour
         timeTravelVFX.SetActive(true);
         col.enabled = true;
         gameObject.tag = "Collider";
-        cooldown = 7f;
+        cooldown = 2.5f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,7 +49,7 @@ public class TimeTravel : MonoBehaviour
         if (other.CompareTag("Player") && cooldown <= 0f)
         {
             StartCoroutine(ChangeEnviro());
-            cooldown = 7f;
+            cooldown = 5.5f;
         }
     }
 

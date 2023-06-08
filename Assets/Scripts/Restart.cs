@@ -7,6 +7,7 @@ public class Restart : MonoBehaviour
 {
     [SerializeField] private GameObject whiteFade;
     [SerializeField] private ParticleSystem particles;
+    [SerializeField] private AudioSource src;
     public void GotoStart()
     {
         StartCoroutine(Go());
@@ -15,7 +16,8 @@ public class Restart : MonoBehaviour
     private IEnumerator Go()
     {
         particles.Play();
-        yield return new WaitForSeconds(1f);
+        src.PlayOneShot(src.clip);
+        yield return new WaitForSeconds(2f);
         whiteFade.SetActive(true);
         yield return new WaitForSeconds(2.5f);
         Destroy(PortalManager.instance.gameObject);
