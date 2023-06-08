@@ -10,6 +10,7 @@ public class TimeTravel : MonoBehaviour
     [SerializeField] private Collider col;
     [SerializeField] private GameObject[] enviros;
     [SerializeField] private GameObject[] mainRooms;
+    [SerializeField] private AudioSource ekkow;
     
 
     private List<GameObject> heldItems;
@@ -40,6 +41,7 @@ public class TimeTravel : MonoBehaviour
         timeTravelVFX.SetActive(true);
         col.enabled = true;
         gameObject.tag = "Collider";
+        cooldown = 5f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -66,6 +68,7 @@ public class TimeTravel : MonoBehaviour
     private IEnumerator ChangeEnviro()
     {
         timeTravelFX.Play();
+        ekkow.Play();
         yield return new WaitForSeconds(1f);
         whiteFade.SetActive(true);
         yield return new WaitForSeconds(3f);

@@ -6,6 +6,7 @@ public class Item : MonoBehaviour
 {
     public int layer;
     [SerializeField] private Renderer render;
+    [SerializeField] private Rigidbody rb;
 
     public void PickedUp()
     {
@@ -23,10 +24,12 @@ public class Item : MonoBehaviour
             if(Physics.Raycast(transform.position, Vector3.up, 20f, 1 << layer))
             {
                 render.enabled = true;
+                rb.useGravity = true;
             }
             else
             {
                 render.enabled = false;
+                rb.useGravity = false;
             }
         }
         else
