@@ -13,6 +13,9 @@ public class TimeTravel : MonoBehaviour
     private float cooldown;
     private bool present = true;
 
+
+    public bool debug = true;
+
     private void Awake()
     {
         present = true;
@@ -40,7 +43,7 @@ public class TimeTravel : MonoBehaviour
         {
             cooldown -= Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && debug)
         {
             FixedPortal();
         }
