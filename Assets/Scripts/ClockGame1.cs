@@ -27,6 +27,7 @@ public class ClockGame1 : MonoBehaviour {
     void Awake()
     {
         AudioSource audio = gameObject.AddComponent<AudioSource>() as AudioSource;
+        audio.spatialBlend = 1.0f;
 
     }
 
