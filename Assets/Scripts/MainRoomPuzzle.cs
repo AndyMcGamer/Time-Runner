@@ -9,50 +9,37 @@ public class MainRoomPuzzle : MonoBehaviour
     public GameObject box2;
     public GameObject box3;
 
-    public GameObject holder1;
-    public GameObject holder2;
-    public GameObject holder3;
+    public XRSocketInteractor holder1;
+    public XRSocketInteractor holder2;
+    public XRSocketInteractor holder3;
 
-    private int placedBoxCount;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        placedBoxCount = 0;
+    public bool checkBox1(){
+        if(holder1.selectTarget == null || box1 == null){
+            return false;
+        }
+        return holder1.selectTarget.name == box1.name;
+    }
+    public bool checkBox2(){
+        if(holder2.selectTarget == null || box2 == null){
+            return false;
+        }
+        return holder2.selectTarget.name == box2.name;
+    }
+    public bool checkBox3(){
+        if(holder3.selectTarget == null || box3 == null){
+            return false;
+        }
+        return holder3.selectTarget.name == box3.name;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CheckPlacement()
     {
-        if (placedBoxCount == 3)
-        {
-            Debug.Log("All boxes placed correctly!");
-            // Perform desired actions when all boxes are placed correctly
+        Debug.Log("In checkplacement");
+        if(checkBox1() && checkBox2() && checkBox3()){
+            Debug.Log("Completed");
         }
-    }
-
-    public void CheckPlacement(GameObject box, GameObject holder)
-    {
-        if (box == box1 && holder == holder1)
-        {
-            placedBoxCount++;
-            Debug.Log("Box 1 placed correctly on Holder 1");
-            // Perform desired actions when Box 1 is placed correctly on Holder 1
-        }
-        else if (box == box2 && holder == holder2)
-        {
-            placedBoxCount++;
-            Debug.Log("Box 2 placed correctly on Holder 2");
-            // Perform desired actions when Box 2 is placed correctly on Holder 2
-        }
-        else if (box == box3 && holder == holder3)
-        {
-            placedBoxCount++;
-            Debug.Log("Box 3 placed correctly on Holder 3");
-            // Perform desired actions when Box 3 is placed correctly on Holder 3
-        }
-        else {
-            Debug.Log("Not a correct placement");
+        else{
+            Debug.Log("Not Enough");
         }
     }
 }
