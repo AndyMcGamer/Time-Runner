@@ -3118,7 +3118,7 @@ GameObject:
   - component: {fileID: 181985249}
   m_Layer: 8
   m_Name: Cube
-  m_TagString: Collider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3147,7 +3147,7 @@ MeshCollider:
   m_GameObject: {fileID: 181985247}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -6405,7 +6405,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh147594
+  m_Name: pb_Mesh128190
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7089,7 +7089,7 @@ GameObject:
   - component: {fileID: 464609954}
   m_Layer: 8
   m_Name: Cube (2)
-  m_TagString: Collider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7118,7 +7118,7 @@ MeshCollider:
   m_GameObject: {fileID: 464609952}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -11197,7 +11197,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh147758
+  m_Name: pb_Mesh128354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12680,7 +12680,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh148226
+  m_Name: pb_Mesh128826
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13953,7 +13953,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh71994
+  m_Name: pb_Mesh128696
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14127,7 +14127,7 @@ GameObject:
   - component: {fileID: 1005720570}
   m_Layer: 7
   m_Name: Floor 4x4 (1)
-  m_TagString: Collider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14156,7 +14156,7 @@ MeshCollider:
   m_GameObject: {fileID: 1005720568}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -14471,7 +14471,7 @@ GameObject:
   - component: {fileID: 1019075709}
   m_Layer: 8
   m_Name: Cube (2)
-  m_TagString: Collider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14500,7 +14500,7 @@ MeshCollider:
   m_GameObject: {fileID: 1019075707}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -16274,7 +16274,7 @@ GameObject:
   - component: {fileID: 1148218090}
   m_Layer: 9
   m_Name: ceiling
-  m_TagString: Collider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16303,7 +16303,7 @@ MeshCollider:
   m_GameObject: {fileID: 1148218088}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -20375,7 +20375,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh148006
+  m_Name: pb_Mesh128604
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20709,7 +20709,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh148290
+  m_Name: pb_Mesh128898
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21950,7 +21950,7 @@ GameObject:
   - component: {fileID: 1524128241}
   m_Layer: 9
   m_Name: ceiling 3x3
-  m_TagString: Collider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21979,7 +21979,7 @@ MeshCollider:
   m_GameObject: {fileID: 1524128239}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -22437,7 +22437,7 @@ MonoBehaviour:
   - nameOfSound: button
     audioClip: {fileID: 8300000, guid: c6fa5c506f0284b1c8a799d7c9854cdc, type: 3}
     spatialBlend: 1
-    volume: 0.4
+    volume: 0.35
     pitch: 1
     audioSource: {fileID: 0}
   - nameOfSound: gate
@@ -22448,14 +22448,14 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - nameOfSound: ekey
     audioClip: {fileID: 8300000, guid: 185154706e06341ed9390eda74ccd80a, type: 3}
-    spatialBlend: 1
+    spatialBlend: 0
     volume: 1
     pitch: 1
     audioSource: {fileID: 0}
   - nameOfSound: elevator
     audioClip: {fileID: 8300000, guid: 8219fa3b4552c47258bad5529adb5ce2, type: 3}
-    spatialBlend: 1
-    volume: 0.4
+    spatialBlend: 0
+    volume: 0.35
     pitch: 1
     audioSource: {fileID: 0}
 --- !u!4 &1550607996
@@ -23029,9 +23029,9 @@ GameObject:
   - component: {fileID: 1616718401}
   - component: {fileID: 1616718400}
   - component: {fileID: 1616718407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: test key
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23085,10 +23085,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1616718407}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: PickedUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1616718407}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: Dropped
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -23215,7 +23239,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616718399}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 36eed805f8e085b4b941a90d8e9d919b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -23287,20 +23311,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1616718407
-MeshCollider:
+--- !u!114 &1616718407
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616718399}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4821974255002996250, guid: 9b43c15340a014878ae55a509ab84069, type: 3}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69453e1f9c6c14d48b7acd90c716effa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: 7
+  render: {fileID: 1616718404}
+  rb: {fileID: 1616718401}
 --- !u!1 &1619436286
 GameObject:
   m_ObjectHideFlags: 0
@@ -25741,7 +25766,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh147642
+  m_Name: pb_Mesh128238
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26799,7 +26824,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh148020
+  m_Name: pb_Mesh128618
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27310,7 +27335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2065941895}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attach Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,6 +7,7 @@ public class Explode : MonoBehaviour
     [SerializeField] private float minVelocity;
     [SerializeField] private GameObject brokenPrefab;
     [SerializeField] private GameObject hammer;
+    [SerializeField] private AudioSource audiosrc;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -19,9 +20,10 @@ public class Explode : MonoBehaviour
                 {
                     if(t.TryGetComponent<Rigidbody>(out Rigidbody childRigidbody))
                     {
-                        childRigidbody.AddExplosionForce(10f, resultingPrefab.transform.position, 0.5f);
+                        childRigidbody.AddExplosionForce(15f, resultingPrefab.transform.position, 0.5f);
                     }
                 }
+                audiosrc.Play();
                 gameObject.SetActive(false);
             }
         }
