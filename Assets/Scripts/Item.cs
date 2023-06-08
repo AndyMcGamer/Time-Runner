@@ -4,29 +4,19 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private Collider col;
-    [SerializeField] private Transform player;
-    [SerializeField] private float distThreshold;
-    private void Update()
+    public int layer;
+    private bool held;
+
+    public void PickedUp()
     {
-        if((transform.position - player.position).sqrMagnitude > distThreshold)
-        {
-            rb.useGravity = false;
-            col.enabled = false;
-        }
-        else
-        {
-            rb.useGravity = true;
-            col.enabled = true;
-        }
+        gameObject.layer = 0;
+        held = true;
     }
 
-    private void OnTriggerExit(Collider other)
+    public void Dropped()
     {
-        if (other.CompareTag("Portal"))
-        {
-
-        }
+        gameObject.layer = layer;
+        held = false;
     }
+
 }
