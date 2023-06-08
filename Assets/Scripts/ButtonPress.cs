@@ -29,6 +29,7 @@ public class ButtonPress : MonoBehaviour
     {
         interactable.hoverEntered.RemoveListener(Follow);
         interactable.hoverExited.RemoveListener(ResetButton);
+        interactable.selectExited.RemoveListener(Freeze);
     }
 
     private void Follow(BaseInteractionEventArgs hover)

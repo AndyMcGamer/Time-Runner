@@ -22,6 +22,7 @@ public class ElevatorChangeScene : MonoBehaviour
         yield return new WaitForSeconds(1f);
         AudioManager.instance.Play("elevator");
         yield return new WaitForSeconds(4.5f);
+        Destroy(PortalManager.instance.gameObject);
         SceneManager.LoadScene("MainFloor");
     }
 }
