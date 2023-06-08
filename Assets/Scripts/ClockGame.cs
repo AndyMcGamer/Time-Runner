@@ -10,6 +10,7 @@ public class ClockGame : MonoBehaviour {
     public GameObject pointerHours;
 
     public GameObject key;
+    public GameObject keyHint;
 
     public AudioSource minTickSound;
     public AudioSource hrTickSound;
@@ -22,7 +23,6 @@ public class ClockGame : MonoBehaviour {
     private float minCooldown, hrCooldown;
 
     private bool solved = false;
-    public float rotSpeed = 3;
     float rotationMinutes, rotationHours;
 
     public void SetMin(bool active)
@@ -67,8 +67,10 @@ public class ClockGame : MonoBehaviour {
             rotationMinutes = (360.0f / 60.0f)  * minutes;
             rotationHours   = ((360.0f / 12.0f) * hours) + ((360.0f / (60.0f * 12.0f)) * minutes);
 
-            
-            
+            //-- draw pointers
+            pointerMinutes.transform.localEulerAngles = new Vector3(0.0f, 0.0f, rotationMinutes);
+            pointerHours.transform.localEulerAngles = new Vector3(0.0f, 0.0f, rotationHours);
+
         }
 
 
@@ -81,13 +83,9 @@ public class ClockGame : MonoBehaviour {
         {
             solved = true;
             key.SetActive(true);
+            keyHint.SetActive(true);
+            AudioManager.instance.Play("solved");
         }
     }
 
-    private void FixedUpdate()
-    {
-        //-- draw pointers
-        pointerMinutes.transform.localEulerAngles = new Vector3(0.0f, 0.0f, Mathf.Lerp(pointerMinutes.transform.localEulerAngles.z, rotationMinutes, rotSpeed * Time.fixedDeltaTime));
-        pointerHours.transform.localEulerAngles = new Vector3(0.0f, 0.0f, rotationHours);
-    }
 }
