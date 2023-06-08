@@ -8,52 +8,86 @@ public class ClockGame : MonoBehaviour {
 	
     public GameObject pointerMinutes;
     public GameObject pointerHours;
+
+    public GameObject key;
+
+    public AudioSource minTickSound;
+    public AudioSource hrTickSound;
     
-    bool button1, button2; // TODO
-    int x,y; // TODO
+    public bool button1, button2; // TODO
+    public int x,y; // TODO
+
+    public float minTickRate = 1f;
+    public float hrTickRate = 1f;
+    private float minCooldown, hrCooldown;
 
     private bool solved = false;
+    public float rotSpeed = 3;
+    float rotationMinutes, rotationHours;
 
-    void Start() 
+    public void SetMin(bool active)
     {
-        
+        button1 = active;
+    }
+
+    public void SetHr(bool active)
+    {
+        button2 = active;
     }
 
     void Update() 
     {
         if(!solved)
         {
-            if(button1) // TODO
+            if(minCooldown > 0) minCooldown -= Time.deltaTime;
+            if(hrCooldown > 0) hrCooldown -= Time.deltaTime;
+            if(button1 && minCooldown <= 0) // TODO
             {
                 minutes += 5;
+                minTickSound.PlayOneShot(minTickSound.clip);
                 if(minutes >= 60)
                 {
                     minutes = 0;
-                    hours ++;
-                    if(hours >= 24) hours = 0;
+                    hours++;
+                    hrTickSound.PlayOneShot(hrTickSound.clip);
+                    if(hours >= 12) hours = 1;
                 }
+                minCooldown = minTickRate;
             }
 
-            if(button2) // TODO
+            if(button2 && hrCooldown <= 0) // TODO
             {
                 hours++;
-                if(hours >= 24) hours = 0;
-            }
-            
-            if(minutes == x && hours == y) // TODO
-            {
-                solved = true;
-                // TODO
+                hrTickSound.PlayOneShot(hrTickSound.clip);
+                if (hours >= 12) hours = 1;
+                hrCooldown = hrTickRate;
             }
 
              //-- calculate pointer angles
-            float rotationMinutes = (360.0f / 60.0f)  * minutes;
-            float rotationHours   = ((360.0f / 12.0f) * hours) + ((360.0f / (60.0f * 12.0f)) * minutes);
+            rotationMinutes = (360.0f / 60.0f)  * minutes;
+            rotationHours   = ((360.0f / 12.0f) * hours) + ((360.0f / (60.0f * 12.0f)) * minutes);
 
-            //-- draw pointers
-            pointerMinutes.transform.localEulerAngles = new Vector3(0.0f, 0.0f, rotationMinutes);
-            pointerHours.transform.localEulerAngles   = new Vector3(0.0f, 0.0f, rotationHours);
+            
+            
         }
 
+
+
+    }
+
+    public void CheckTime()
+    {
+        if(x == minutes && y == hours)
+        {
+            solved = true;
+            key.SetActive(true);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        //-- draw pointers
+        pointerMinutes.transform.localEulerAngles = new Vector3(0.0f, 0.0f, Mathf.Lerp(pointerMinutes.transform.localEulerAngles.z, rotationMinutes, rotSpeed * Time.fixedDeltaTime));
+        pointerHours.transform.localEulerAngles = new Vector3(0.0f, 0.0f, rotationHours);
     }
 }
