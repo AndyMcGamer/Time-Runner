@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &366847681253061837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 366847681253061835}
+  - component: {fileID: 366847681253061836}
+  m_Layer: 0
+  m_Name: AudioManage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &366847681253061835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366847681253061837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &366847681253061836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366847681253061837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40943c014a434fe8a879daf1a7bcdac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listOfSounds:
+  - nameOfSound: button
+    audioClip: {fileID: 8300000, guid: c6fa5c506f0284b1c8a799d7c9854cdc, type: 3}
+    spatialBlend: 1
+    volume: 0.35
+    pitch: 1
+    audioSource: {fileID: 0}
+  - nameOfSound: gate
+    audioClip: {fileID: 8300000, guid: cb63cb4c1fda140b0a551299cbed7c13, type: 3}
+    spatialBlend: 1
+    volume: 0.3
+    pitch: 1
+    audioSource: {fileID: 0}
+  - nameOfSound: ekey
+    audioClip: {fileID: 8300000, guid: 185154706e06341ed9390eda74ccd80a, type: 3}
+    spatialBlend: 0
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}
+  - nameOfSound: elevator
+    audioClip: {fileID: 8300000, guid: 8219fa3b4552c47258bad5529adb5ce2, type: 3}
+    spatialBlend: 0
+    volume: 0.35
+    pitch: 1
+    audioSource: {fileID: 0}
+  - nameOfSound: solved
+    audioClip: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+    spatialBlend: 0
+    volume: 0.35
+    pitch: 1
+    audioSource: {fileID: 0}

@@ -18,6 +18,8 @@ public class MainRoomPuzzle : MonoBehaviour
     public XRSocketInteractor holder2;
     public XRSocketInteractor holder3;
 
+    [SerializeField] private TimeTravel timeportal;
+
     public bool checkBox1(){
         IXRSelectInteractable interactable = holder1.GetOldestInteractableSelected();
         if(interactable == null || box1 == null){
@@ -45,19 +47,18 @@ public class MainRoomPuzzle : MonoBehaviour
 
     public void CheckPlacement()
     {
-        Debug.Log("In checkplacement");
         if(checkBox1() && checkBox2() && checkBox3()){
             //Activate portal here
             box1.SetActive(false);
             box2.SetActive(false);
             box3.SetActive(false);
 
+            timeportal.FixedPortal();
+            AudioManager.instance.Play("solved");
+
             box1Still.SetActive(true);
             box2Still.SetActive(true);
             box3Still.SetActive(true);
-        }
-        else{
-            Debug.Log("Not Enough");
         }
     }
 }
