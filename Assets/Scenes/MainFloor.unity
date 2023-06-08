@@ -13644,17 +13644,17 @@ PrefabInstance:
     - target: {fileID: 5163128801075508602, guid: a585eb699aee34d05842b49dc774bd1c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.955
+      value: 0.353
       objectReference: {fileID: 0}
     - target: {fileID: 5163128801075508602, guid: a585eb699aee34d05842b49dc774bd1c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.322
+      value: 2.769
       objectReference: {fileID: 0}
     - target: {fileID: 5163128801075508602, guid: a585eb699aee34d05842b49dc774bd1c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.428
+      value: 2.321
       objectReference: {fileID: 0}
     - target: {fileID: 5163128801075508602, guid: a585eb699aee34d05842b49dc774bd1c,
         type: 3}
@@ -13695,12 +13695,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: 36eed805f8e085b4b941a90d8e9d919b,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6186333738415512523, guid: a585eb699aee34d05842b49dc774bd1c,
         type: 3}
       propertyPath: m_Mass
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186333738415512523, guid: a585eb699aee34d05842b49dc774bd1c,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6186333738415512523, guid: a585eb699aee34d05842b49dc774bd1c,
         type: 3}
@@ -13865,7 +13869,7 @@ PrefabInstance:
     - target: {fileID: 6186333739338880173, guid: a585eb699aee34d05842b49dc774bd1c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0025
+      value: -0.0015
       objectReference: {fileID: 0}
     - target: {fileID: 6186333739338880174, guid: a585eb699aee34d05842b49dc774bd1c,
         type: 3}
@@ -17702,7 +17706,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &552725513
 Transform:
   m_ObjectHideFlags: 0
@@ -41256,7 +41260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1400822813
 Transform:
   m_ObjectHideFlags: 0
