@@ -36,7 +36,7 @@ public class Item : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, Vector3.up, out RaycastHit ray, 20f))
             {
-                layer = ray.collider.gameObject.layer;
+                if (ray.collider.gameObject.name != gameObject.name) layer = ray.collider.gameObject.layer;
             }
         }
     }
