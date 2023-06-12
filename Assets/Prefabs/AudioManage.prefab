@@ -75,3 +75,9 @@ MonoBehaviour:
     volume: 0.35
     pitch: 1
     audioSource: {fileID: 0}
+  - nameOfSound: bell
+    audioClip: {fileID: 8300000, guid: 08f6b38c0c7d99647999735c6864dd1b, type: 3}
+    spatialBlend: 0
+    volume: 0.5
+    pitch: 1
+    audioSource: {fileID: 0}

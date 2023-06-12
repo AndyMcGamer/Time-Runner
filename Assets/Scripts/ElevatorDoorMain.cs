@@ -36,6 +36,7 @@ public class ElevatorDoorMain : MonoBehaviour
     private IEnumerator Starter()
     {
         fader.FadeOut();
+        AudioManager.instance.Play("bell");
         yield return new WaitForSeconds(0.8f);
         anim.Play("ElevatorOpen");
     }
