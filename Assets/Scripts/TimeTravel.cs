@@ -6,7 +6,7 @@ public class TimeTravel : MonoBehaviour
 {
     [SerializeField] private GameObject timeTravelVFX;
     [SerializeField] private ParticleSystem timeTravelFX;
-    [SerializeField] private GameObject whiteFade;
+    [SerializeField] private ScreenFader fade;
     [SerializeField] private Collider col;
     [SerializeField] private GameObject[] enviros;
     [SerializeField] private GameObject[] mainRooms;
@@ -35,6 +35,7 @@ public class TimeTravel : MonoBehaviour
         present = true;
         cooldown = 5.5f;
         heldItems ??= new();
+        fade = SceneController.instance.fade;
     }
     public void FixedPortal()
     {
@@ -69,35 +70,38 @@ public class TimeTravel : MonoBehaviour
     {
         timeTravelFX.Play();
         ekkow.Play();
-        yield return new WaitForSeconds(1f);
-        whiteFade.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.9f);
+        fade.fadeColor = new Color(1, 1, 1);
+        fade.fadeDuration = 1.5f;
+        fade.FadeIn();
+        yield return new WaitForSeconds(2.67f);
+        fade.FadeOut();
+        yield return new WaitForSeconds(0.33f);
 
         present = !present;
         if (present)
         {
             enviros[0].SetActive(true);
             transform.parent = mainRooms[0].transform;
-            enviros[1].SetActive(false);
             foreach (var item in heldItems)
             {
                 item.transform.parent = enviros[0].transform;
             }
+            enviros[1].SetActive(false);
+            
         }
         else
         {
             enviros[1].SetActive(true);
             transform.parent = mainRooms[1].transform;
-            enviros[0].SetActive(false);
-            foreach(var item in heldItems)
+            foreach (var item in heldItems)
             {
                 item.transform.parent = enviros[1].transform;
             }
+            enviros[0].SetActive(false);
+            
         }
         
-        
-        yield return new WaitForSeconds(0.8f);
-        whiteFade.SetActive(false);
 
     }
 }

@@ -5,9 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public string scene;
-    public void ChangeScenes()
+    [SerializeField] private ScreenFader fade;
+
+    private void Awake()
     {
-        SceneManager.LoadScene(scene);
+        fade = SceneController.instance.fade;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player")) StartCoroutine(PlayGame());
+    }
+
+    private IEnumerator PlayGame()
+    {
+        fade.fadeColor = new Color(0, 0, 0);
+        fade.fadeDuration = 1.2f;
+        fade.FadeIn();
+        yield return new WaitForSeconds(1.2f);
+        //SceneManager.LoadScene("Starter");
+        SceneController.instance.LoadScene("Starter");
     }
 }

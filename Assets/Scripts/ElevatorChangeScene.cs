@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class ElevatorChangeScene : MonoBehaviour
 {
     [SerializeField] private Animator anim;
+    [SerializeField] private ScreenFader fade;
+
+    private void Awake()
+    {
+        fade = SceneController.instance.fade;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -21,8 +27,12 @@ public class ElevatorChangeScene : MonoBehaviour
         anim.enabled = false;
         yield return new WaitForSeconds(1f);
         AudioManager.instance.Play("elevator");
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(4f);
+        fade.fadeColor = new Color(0, 0, 0);
+        fade.fadeDuration = 1f;
+        fade.FadeIn();
+        yield return new WaitForSeconds(1f);
         Destroy(PortalManager.instance.gameObject);
-        SceneManager.LoadScene("MainFloor");
+        SceneController.instance.LoadScene("MainFloor");
     }
 }

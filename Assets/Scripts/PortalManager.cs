@@ -28,6 +28,7 @@ public class PortalManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
+        stencilMask = SceneController.instance.cameraMask;
         roomIndex--;
         foreach (Transform child in rooms[roomIndex].transform)
         {

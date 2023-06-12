@@ -18,10 +18,7 @@ public class Explode : MonoBehaviour
                 GameObject resultingPrefab = Instantiate(brokenPrefab);
                 foreach(Transform t in resultingPrefab.transform)
                 {
-                    if(t.TryGetComponent<Rigidbody>(out Rigidbody childRigidbody))
-                    {
-                        childRigidbody.AddExplosionForce(15f, resultingPrefab.transform.position, 0.5f);
-                    }
+                    t.GetComponent<Rigidbody>().AddExplosionForce(15f, resultingPrefab.transform.position, 0.5f);
                 }
                 audiosrc.Play();
                 gameObject.SetActive(false);
