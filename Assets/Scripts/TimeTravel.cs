@@ -85,23 +85,22 @@ public class TimeTravel : MonoBehaviour
             transform.parent = mainRooms[0].transform;
             foreach (var item in heldItems)
             {
+                item.GetComponent<Item>().parent=enviros[0].transform;
                 item.transform.parent = enviros[0].transform;
             }
             enviros[1].SetActive(false);
-            
         }
         else
         {
             enviros[1].SetActive(true);
             transform.parent = mainRooms[1].transform;
-            foreach (var item in heldItems)
+            foreach(var item in heldItems)
             {
-                item.transform.parent = enviros[1].transform;
+                item.GetComponent<Item>().parent=enviros[1].transform;
+                item.transform.parent = enviros[1].transform; 
             }
             enviros[0].SetActive(false);
-            
         }
-        
 
     }
 }

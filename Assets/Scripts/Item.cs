@@ -8,7 +8,7 @@ public class Item : MonoBehaviour
     public int layer;
     [SerializeField] private Renderer render;
     [SerializeField] private Rigidbody rb;
-    private Transform parent;
+    public Transform parent;
     private RaycastHit[] hits;
 
     private void Awake()
@@ -64,7 +64,6 @@ public class Item : MonoBehaviour
         }
         else
         {
-            transform.parent = parent;
             if (Physics.Raycast(transform.position, Vector3.up, out RaycastHit ray, 20f))
             {
                 if (ray.collider.gameObject.name != gameObject.name) layer = ray.collider.gameObject.layer;
